@@ -12,7 +12,7 @@ async function startup({ id, version, rootURI }) {
 	log("Starting 1.0.0");
 
 	Zotero.PreferencePanes.register({
-		pluginID: 'zotero-open-markdown@henryyu',
+		pluginID: 'zotero-open-markdown@henryyu.github.io',
 		src: rootURI + 'preferences.xhtml',
 		scripts: [rootURI + 'preferences.js']
 	});
