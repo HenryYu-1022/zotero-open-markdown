@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<!DOCTYPE window>
+<vbox xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+      xmlns:html="http://www.w3.org/1999/xhtml">
+
+	<groupbox>
+		<label><html:h2>Open Markdown Settings</html:h2></label>
+
+		<vbox>
+			<label value="Markdown Library Root (output_root/markdown/)" />
+			<label style="font-size: 11px; color: #888;">
+				The root directory of your converted Markdown files.
+				This is usually your paper-agent output_root/markdown/ directory.
+			</label>
+			<hbox align="center">
+				<html:input id="pref-markdown-root"
+					type="text"
+					preference="extensions.zotero-open-markdown.markdown_root"
+					style="flex: 1; min-width: 400px; font-family: monospace;"
+				/>
+				<button id="btn-browse-markdown-root"
+					label="Browse…"
+					oncommand="browseMarkdownRoot()"
+				/>
+			</hbox>
+		</vbox>
+
+		<separator class="thin" />
+
+		<vbox>
+			<label value="PDF Library Root (input_root)" />
+			<label style="font-size: 11px; color: #888;">
+				The root directory of your source PDF files.
+				This should match the input_root in your paper-agent settings.json.
+			</label>
+			<hbox align="center">
+				<html:input id="pref-input-root"
+					type="text"
+					preference="extensions.zotero-open-markdown.input_root"
+					style="flex: 1; min-width: 400px; font-family: monospace;"
+				/>
+				<button id="btn-browse-input-root"
+					label="Browse…"
+					oncommand="browseInputRoot()"
+				/>
+			</hbox>
+		</vbox>
+
+		<separator class="thin" />
+
+		<vbox>
+			<label style="font-size: 11px; color: #666; white-space: pre-wrap;">
+How it works:
+  1. Right-click any item in Zotero with a PDF attachment.
+  2. Choose "Reveal Markdown in Finder" to show the file in Finder/Explorer.
+  3. Choose "Open Markdown File" to open with your default .md editor.
+
+The plugin maps PDF paths to Markdown paths using the paper-agent convention:
+  PDF:      &lt;input_root&gt;/&lt;path&gt;/Paper.pdf
+  Markdown: &lt;markdown_root&gt;/&lt;path&gt;/Paper/Paper.md
+			</label>
+		</vbox>
+	</groupbox>
+
+</vbox>

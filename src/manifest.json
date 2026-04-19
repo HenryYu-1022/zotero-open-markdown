@@ -1,0 +1,14 @@
+{
+	"manifest_version": 2,
+	"name": "Open Markdown",
+	"version": "1.0.0",
+	"description": "Right-click a Zotero item to reveal or open its corresponding Markdown file from your paper-agent library.",
+	"homepage_url": "https://github.com/HenryYu-1022/zotero-open-markdown",
+	"applications": {
+		"zotero": {
+			"id": "zotero-open-markdown@henryyu",
+			"update_url": "https://raw.githubusercontent.com/HenryYu-1022/zotero-open-markdown/main/update.json",
+			"strict_min_version": "7.0"
+		}
+	}
+}
